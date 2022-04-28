@@ -4,7 +4,7 @@
 
 ## Input Tables and Sequences
 #### 1) CHM13v2.0_HSat123_Strand_Subfam_DistinctArrays.bed
-##### This contains information on all HSat1-3 arrays in the chm13v2.0 assembly.
+##### [copied into main directory, here] This contains information on all HSat1-3 arrays in the chm13v2.0 assembly.
 ##### Columns are chr, start, end, family/subfamily, 0, strand, start, end, rgb color, array index (chr_family_number; "small" if <10 kb), number of inversion breakpoints
 #### 2) chm13v2.0_hsat*_DistinctArrays_FWD.fasta.gz
 ##### This was produced by obtaining sequences from all distinct arrays >10kb, flipping them to the FWD orientation, and concatenating discontiguous subarrays with 50k Ns sandwiched between
