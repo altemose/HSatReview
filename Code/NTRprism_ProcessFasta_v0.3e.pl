@@ -328,7 +328,7 @@ if(1){
 					#my $tophitstring2 = join(",",@finaltophits2);
 				
 					print TOP "$regionname\t$tophitstring\t$colsumstring\t$bestkmerstring\t$fragpropstring\n";
-					print "$ct2: printed to $outfile; $seqlen $seqlenNoN; $tophitstring\t$colsumstring\t$bestkmerstring\t$fragpropstring\n";
+					print "$ct2: printed to $outfile; $seqlen $seqlenNoN; $tophitstring\t$colsumstring\t$bestkmerstring\t$fragpropstring";
 
 					####now use the top k-mers to digest the DNA and output the fragments satisfying size range to a fasta
 					if($suppressF==0){
@@ -338,6 +338,10 @@ if(1){
 						
 								my $motif = $bestkmers[$n];
 								my $peak1 = $finaltophits[$n];
+								if($peak1<$klen){
+									print "\tNote: cannot produce fasta files for periodicities ($peak1 bp) shorter than the k-mer length ($klen bp)";
+									next;
+								}
 						
 								my $minsize = int(sprintf("%.0f",$peak1 - $lengthtol*$peak1));
 								my $maxsize = int(sprintf("%.0f",$peak1 + $lengthtol*$peak1));
@@ -380,8 +384,8 @@ if(1){
 								$outcount++;
 						
 						}#closes for
-						
 					} #closes if suppressF
+					print "\n";
 				}else{
 					print TOP "$regionname\tNA\tNA\tNA\tNA\n";
 					print "$ct2: no k-mers satisfy kmer_min_count ($countthresh)\n";
