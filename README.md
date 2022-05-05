@@ -1,7 +1,7 @@
 # README for T2T-chm13v2 HSat123 analyses
-##for Altemose N, 2022, Seminars in Cell and Developmental Biology, https://doi.org/10.1016/j.semcdb.2022.04.012
+for Altemose N, 2022, Seminars in Cell and Developmental Biology, https://doi.org/10.1016/j.semcdb.2022.04.012
 
-##open-access preprint: https://www.preprints.org/manuscript/202202.0009/v2
+open-access preprint: https://www.preprints.org/manuscript/202202.0009/v2
 
 ## Input Tables and Sequences
 #### 1) CHM13v2.0_HSat123_Strand_Subfam_DistinctArrays.bed
